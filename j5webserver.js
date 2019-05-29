@@ -22,7 +22,7 @@ var board = new five.Board();
   board.on("ready", function() {
     var led = new five.Led(11); //Gpio(11, 'out'); //use GPIO pin 4 as output
 
-  io.sockets.on('connection', function (socket) {// WebSocket Connection
+  io.sockets.on('connection', function (socket) {// WebSocket Connection--- this is a change i am making by typing words
     console.log("Connected to Websocket on port 8080");
     socket.on('LedOn', function(data) { //get light switch status from client
       console.log("Switch has been switched" + data);
